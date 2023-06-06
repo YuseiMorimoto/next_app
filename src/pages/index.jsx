@@ -7,27 +7,24 @@ import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
   const [count, setCount] = useState(1);
-  // let count = 1;
-
   // reactのコンポーネントは状態が変化しないと再レンダリングされない
-  const handleClick = () => {
-    // 前の状態を利用した処理をしたいときに関数を使う。
-    setCount((count) => count + 1);
-    // setFoo(count + 1);
-    // count = count + 1;
-  };
+  const handleClick = useCallback(() => {
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
 
   useEffect(() => {
     // マウント時
+    console.log("foo");
     document.body.style.backgroundColor = "lightblue";
 
     return () => {
+      console.log("bar");
       // アンマウント時
       document.body.style.backgroundColor = "";
     };
-  }, []);
-
-  console.log(count);
+  }, [count]);
 
   return (
     <div className={classes.container}>
