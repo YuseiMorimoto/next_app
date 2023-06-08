@@ -10,10 +10,13 @@ export default function Home() {
   // reactのコンポーネントは状態が変化しないと再レンダリングされない
   const handleClick = useCallback(() => {
     if (count < 10) {
-      setCount((count) => count + 1);
+      setCount((prevCount) => prevCount + 1);
     }
   }, [count]);
 
+  const handleDisplay = useCallback(() => {
+    setIsShow((prevIsShow) => !prevIsShow);
+  }, []);
   useEffect(() => {
     // マウント時
     console.log("foo");
