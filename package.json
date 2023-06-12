@@ -15,8 +15,23 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
-    "eslint-plugin-sort-keys-custom-order": "^1.0.5"
-  }
+    "eslint-plugin-sort-keys-custom-order": "^1.0.5",
+    "tailwindcss": "^3.3.2"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuseiMorimoto/next_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuseiMorimoto/next_app/issues"
+  },
+  "homepage": "https://github.com/YuseiMorimoto/next_app#readme"
 }
