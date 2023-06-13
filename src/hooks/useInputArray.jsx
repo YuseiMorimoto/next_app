@@ -17,7 +17,7 @@ export const useInputArray = () => {
     setArray((prevArray) => {
       // const newArray = prevArray;
       // newArray.push(1);
-      if (prevArray.some((item) => item === text)) {
+      if (prevArray.includes(text)) {
         alert("同じ要素がすでに存在します。");
         return prevArray;
       }
