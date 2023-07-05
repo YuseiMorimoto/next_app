@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useCallback, useEffect, useReducer } from "react";
 import { usePosts } from "src/hooks/usePosts";
 
@@ -17,7 +18,11 @@ export const Posts = () => {
   return (
     <ol>
       {data.map((post) => {
-        return <div key={post.id}>{post.title}</div>;
+        return (
+          <li key={post.id}>
+            <Link href={`/post/${post.id}`}>{post.title}</Link>
+          </li>
+        );
       })}
     </ol>
   );
